@@ -1,0 +1,21 @@
+# Exemple de fichier de réponses pour : sudo ./glpi-install.sh -c glpi.conf -y
+# Copiez-le (cp glpi.conf.exemple glpi.conf), adaptez-le, puis protégez-le : chmod 600 glpi.conf
+GLPI_VERSION="latest"            # ou une version précise, ex. 11.0.4
+GLPI_FQDN="support.mondomaine.fr"
+DB_NAME="db25_glpi"
+DB_USER="glpi_adm"
+DB_PASS=""                       # vide = généré aléatoirement
+GLPI_LANG="fr_FR"
+INSTALL_LDAP="n"                 # o pour l'annuaire LDAP / Active Directory
+INSTALL_APCU="o"
+SECURE_MARIADB="o"
+DISABLE_DEFAULT_SITE="o"
+UPLOAD_MAX="20M"
+DB_INSTALL_MODE="cli"            # cli = tout automatique, web = assistant dans le navigateur
+ENABLE_TIMEZONES="o"
+GLPI_ADMIN_PASS=""               # vide = généré aléatoirement
+DISABLE_DEFAULT_USERS="o"
+SETUP_CRON="o"
+SETUP_HTTPS="n"                  # o pour enchaîner sur glpi-https.sh
+HTTPS_MODE="selfsigned"          # letsencrypt | selfsigned
+LE_EMAIL=""                      # obligatoire pour letsencrypt
